@@ -47,7 +47,7 @@ namespace COM_XSL_Load_InMem
             //Transform XSL
             comType.InvokeMember("transformNode", BindingFlags.Static | BindingFlags.InvokeMethod, null, comObject, new Object[] { comObject });
         }
-
+        //This only works on .Net old skool, not core
         static void NATIVE()
         {
             XslCompiledTransform transforma = new XslCompiledTransform();
