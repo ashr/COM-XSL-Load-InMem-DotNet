@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2043
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COM-XSL-Load-InMem", "COM-XSL-Load-InMem.csproj", "{8E3399A5-2176-4614-B372-B1ADB0156333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COM-XSL-Load-InMem-Native", "COM-XSL-Load-InMem-Native\COM-XSL-Load-InMem-Native.csproj", "{325B3C15-DED8-409D-B3BD-7937EA5FB779}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8E3399A5-2176-4614-B372-B1ADB0156333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E3399A5-2176-4614-B372-B1ADB0156333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E3399A5-2176-4614-B372-B1ADB0156333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{325B3C15-DED8-409D-B3BD-7937EA5FB779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325B3C15-DED8-409D-B3BD-7937EA5FB779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325B3C15-DED8-409D-B3BD-7937EA5FB779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325B3C15-DED8-409D-B3BD-7937EA5FB779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
